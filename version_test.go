@@ -18,33 +18,33 @@ func TestGetVersionList(t *testing.T) {
 
 func TestVersion(t *testing.T) {
 
-	if generateVersionFromString("master").Version() != "master" {
-		t.Log(generateVersionFromString("master").Version())
+	if GenerateVersionFromString("master").Version() != "master" {
+		t.Log(GenerateVersionFromString("master").Version())
 		t.Fail()
 	}
 
-	if generateVersionFromString("go1.x").Version() != "go1.x" {
-		t.Log(generateVersionFromString("go1.x").Version())
+	if GenerateVersionFromString("go1.x").Version() != "go1.x" {
+		t.Log(GenerateVersionFromString("go1.x").Version())
 		t.Fail()
 	}
 
-	if generateVersionFromString("go1").Version() != "go1" {
-		t.Log(generateVersionFromString("go1").Version())
+	if GenerateVersionFromString("go1").Version() != "go1" {
+		t.Log(GenerateVersionFromString("go1").Version())
 		t.Fail()
 	}
 
-	if generateVersionFromString("go1.5.x").Version() != "go1.5.x" {
-		t.Log(generateVersionFromString("go1.5.x").Version())
+	if GenerateVersionFromString("go1.5.x").Version() != "go1.5.x" {
+		t.Log(GenerateVersionFromString("go1.5.x").Version())
 		t.Fail()
 	}
 
-	if generateVersionFromString("go1.5").Version() != "go1.5" {
-		t.Log(generateVersionFromString("go1.5").Version())
+	if GenerateVersionFromString("go1.5").Version() != "go1.5" {
+		t.Log(GenerateVersionFromString("go1.5").Version())
 		t.Fail()
 	}
 
-	if generateVersionFromString("go1.5.4").Version() != "go1.5.4" {
-		t.Log(generateVersionFromString("go1.5.4").Version())
+	if GenerateVersionFromString("go1.5.4").Version() != "go1.5.4" {
+		t.Log(GenerateVersionFromString("go1.5.4").Version())
 		t.Fail()
 	}
 

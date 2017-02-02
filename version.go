@@ -160,7 +160,7 @@ func GetVersionList() (*VersionList, error) {
 
 }
 
-func generateVersionFromString(str string) *Version {
+func GenerateVersionFromString(str string) *Version {
 
 	str = strings.TrimPrefix(str, "go")
 	v := &Version{}
