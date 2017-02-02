@@ -1,6 +1,9 @@
 package version
 
-import "testing"
+import (
+	"fmt"
+	"testing"
+)
 
 func TestGetVersionList(t *testing.T) {
 
@@ -63,5 +66,17 @@ func TestFindLatestVersion(t *testing.T) {
 	t.Log(FindLatestVersion(list, "go1.x"))
 	t.Log(FindLatestVersion(list, "go1"))
 	t.Log(FindLatestVersion(list, "master"))
+
+}
+
+func ExampleFindLatestVersion() {
+
+	list, err := GetVersionList()
+	if err != nil {
+		panic(err)
+	}
+
+	fmt.Println(FindLatestVersion(list, "go1.5.x"))
+	// Output: go1.5.4
 
 }
