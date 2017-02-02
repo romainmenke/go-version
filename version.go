@@ -211,7 +211,7 @@ func GenerateVersionFromString(str string) *Version {
 
 func FindLatestVersion(list *VersionList, versionName string) string {
 
-	v := generateVersionFromString(versionName)
+	v := GenerateVersionFromString(versionName)
 	if v.MajorLatest {
 		return "master"
 	}
@@ -220,7 +220,7 @@ func FindLatestVersion(list *VersionList, versionName string) string {
 	for _, item := range list.Items {
 		if strings.Contains(item.Name, v.VersionWithoutWildcard()) {
 
-			otherV := generateVersionFromString(item.Name)
+			otherV := GenerateVersionFromString(item.Name)
 
 			if latest == nil {
 				latest = otherV
